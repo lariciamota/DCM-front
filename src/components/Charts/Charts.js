@@ -9,7 +9,25 @@ export default class Charts extends Component {
         this.state = {
           data: getInitialData()
         };
+        this.eventSource = new EventSource("http://localhost:8081/events");
     }
+
+    componentDidMount() {
+        this.eventSource.onmessage = e =>
+          this.updateDataState(JSON.parse(e.data));
+      }
+    
+    updateDataState(dataState) {
+        let newData = this.state.data.map(item => {
+          if (item.title === dataState.title) {
+            item.array = dataState.array;
+          }
+          return item;
+        });
+    
+        this.setState(Object.assign({}, { data: newData }));
+    }
+      
     render() {
 
         function createData(array){
