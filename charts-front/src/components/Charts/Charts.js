@@ -24,7 +24,6 @@ export default class Charts extends Component {
           }
           return item;
         });
-    
         this.setState(Object.assign({}, { data: newData }));
     }
       

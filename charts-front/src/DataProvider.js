@@ -2,23 +2,23 @@ export function getInitialData() {
     return [
       {
         title: 'Média', 
-        array: [500, 300, 350, 650, 200]
+        array: [0, 0, 0, 0, 0]
       },
       {
         title: 'Mediana', 
-        array: [300, 500, 350, 200, 650]
+        array: [0, 0, 0, 0, 0]
       },
       {
         title: 'Desvio Padrão', 
-        array: [500, 100, 350, 250, 200]
+        array: [0, 0, 0, 0, 0]
       },
       {
         title: 'Moda',
-        array: [340, 300, 250, 150, 400]
+        array: [0, 0, 0, 0, 0]
       },
       {
         title: 'Variância',
-        array: [510, 30, 30, 150, 90]
+        array: [0, 0, 0, 0, 0]
       }
     ];
   }
